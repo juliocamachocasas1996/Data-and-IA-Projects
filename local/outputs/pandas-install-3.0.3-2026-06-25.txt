@@ -1,0 +1,19 @@
+=== pandas==3.0.3 Install Log ===
+Date: 2026-06-25
+Python: Python 3.13.13
+Venv: C:\Users\CAMAJUL\OneDrive - C.H. Robinson\Data and IA projects\Project1\.venv
+Index: https://artifactory.chrobinson.com/artifactory/api/pypi/pypi/simple
+
+--- Packages Installed ---
+pandas==3.0.3         [NEW]  cp313-cp313-win_amd64.whl  9.8 MB
+numpy==2.5.0          [NEW]  cp313-cp313-win_amd64.whl  12.4 MB
+python-dateutil==2.9.0.post0 [NEW] py2.py3-none-any.whl 229 kB
+tzdata==2026.2        [NEW]  py2.py3-none-any.whl       349 kB
+six==1.17.0           [NEW]  py2.py3-none-any.whl       11 kB
+
+--- Already Satisfied ---
+None
+
+--- Result ---
+STATUS: SUCCESS
+Successfully installed numpy-2.5.0 pandas-3.0.3 python-dateutil-2.9.0.post0 six-1.17.0 tzdata-2026.2
