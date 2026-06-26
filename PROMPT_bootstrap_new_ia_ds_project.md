@@ -80,12 +80,12 @@ $env:PIP_CONFIG_FILE = $pipIni
 
 ## Step 4 - Install basic starter packages
 
-All five candidates are confirmed available on Artifactory. Install them in a single pass using wheel-only builds. If Artifactory is unreachable (VPN required), pip will emit a clear connection error — stop and ask the user to connect to VPN before retrying.
+All eight candidates are confirmed available on Artifactory. Install them in a single pass using wheel-only builds. If Artifactory is unreachable (VPN required), pip will emit a clear connection error — stop and ask the user to connect to VPN before retrying.
 
 PowerShell:
 
 $index = 'https://artifactory.chrobinson.com/artifactory/api/pypi/pypi/simple'
-$available = @('pandas','numpy','requests','python-dotenv','tqdm')
+$available = @('pandas','numpy','requests','python-dotenv','tqdm','matplotlib','seaborn','plotly')
 $missing = @()
 
 & $venvPip install --only-binary :all: --index-url $index $available
@@ -99,10 +99,13 @@ Instead, write the validation code to a temporary .py file, run it, then delete 
 PowerShell:
 
 $validateScript = @"
-import pandas, numpy, requests, dotenv, tqdm
+import pandas, numpy, requests, dotenv, tqdm, matplotlib, seaborn, plotly
 print('pandas:', pandas.__version__)
 print('numpy:', numpy.__version__)
 print('requests:', requests.__version__)
+print('matplotlib:', matplotlib.__version__)
+print('seaborn:', seaborn.__version__)
+print('plotly:', plotly.__version__)
 print('VALIDATION COMPLETE')
 "@
 $tmpPy = Join-Path $project 'validate_env_tmp.py'
