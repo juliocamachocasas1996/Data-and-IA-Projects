@@ -8,6 +8,7 @@ print("Pandas version:", pd.__version__)
 
 # Create a simple DataFrame
 data = {
+
     'Name': ['Alice', 'Bob', 'Charlie'],
     'Age': [25, 30, 35],
     'City': ['New York', 'Paris', 'London']
@@ -25,3 +26,5 @@ print("\nDataFrame statistics:")
 print(df.describe())
 
 print("\n✓ Pandas is working correctly!")
+
+
